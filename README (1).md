@@ -1,5 +1,5 @@
 🎮 Análise Exploratória — Steam Games Dataset
-Autor: Pedro Lima Zampier de Andrade  
+Autor: Arthur Bueno de Morais Oliveira
 Atividade: Trabalho realizado para a aula de Ciência de Dados  
 Arquivo principal: `steam_analysis_colab.ipynb
 ---

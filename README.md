@@ -1,103 +1,79 @@
-🎮 Análise Exploratória — Steam Games Dataset
-Autor: Arthur Bueno de Morais OLiveira
-Atividade: Trabalho realizado para a aula de Ciência de Dados  
-Arquivo principal: `steam_analysis_colab.ipynb
----
-📌 Sobre o projeto
-Este projeto apresenta uma análise exploratória de dados (EDA) sobre jogos da plataforma Steam, utilizando o dataset público Steam Games Dataset. O objetivo da atividade é investigar padrões relacionados a preço, popularidade, avaliações dos usuários, gêneros, DLCs e qualidade percebida dos jogos.
-A análise foi desenvolvida originalmente no Google Colab e organizada em perguntas analíticas, gráficos e insights de negócio.
----
-📂 Dataset utilizado
-O dataset contém informações detalhadas sobre jogos da Steam, incluindo:
-Nome do jogo
-Data de lançamento
-Preço em dólar
-Estimativa de donos/jogadores
-Avaliações positivas e negativas
-Taxa de aprovação
-Quantidade de DLCs
-Gêneros e categorias
-Desenvolvedores e publicadoras
-Idiomas suportados
-Plataformas compatíveis
-Tempo médio e mediano de jogo
-Recomendações e conquistas
-O carregamento do dataset é feito diretamente via `kagglehub`, a partir do arquivo `games.csv`.
----
-🧰 Tecnologias e bibliotecas
-O projeto utiliza as seguintes bibliotecas Python:
-```python
-pandas
-numpy
-matplotlib
-seaborn
-kagglehub
-```
-Essas bibliotecas são usadas para carregamento dos dados, limpeza, criação de novas variáveis, análise estatística e geração dos gráficos.
----
-🧹 Etapas da análise
-1. Setup
-Instalação e importação das bibliotecas necessárias para executar a análise.
-2. Carregamento do dataset
-O dataset é carregado por meio da biblioteca `kagglehub`, utilizando o arquivo `games.csv`.
-3. Limpeza e feature engineering
-Nesta etapa são criadas novas variáveis para facilitar a análise, como:
-`Year`: ano de lançamento do jogo
-`Owners_est`: estimativa numérica de donos do jogo
-`Total_reviews`: total de avaliações recebidas
-`Approval_rate`: percentual de avaliações positivas
-`Is_free`: identifica se o jogo é gratuito
-`Price_band`: faixa de preço do jogo
----
-❓ Perguntas analisadas
-O projeto foi estruturado em 6 perguntas principais:
-1. Qual o preço mediano por gênero na Steam?
-Analisa quais gêneros possuem maior e menor preço mediano considerando apenas jogos pagos.
-2. Qual a distribuição de preços e proporção entre jogos pagos e gratuitos?
-Compara jogos free-to-play e pagos, além de mostrar média e mediana dos preços dos jogos pagos.
-3. Quais são os gêneros dominantes na Steam?
-Identifica os gêneros mais frequentes no catálogo analisado.
-4. Existe relação entre preço e avaliação dos usuários?
-Analisa a aprovação dos jogos por faixa de preço e observa a dispersão entre preço e percentual de reviews positivas.
-5. Qual o efeito do volume de DLCs na satisfação do público?
-Compara a taxa mediana de aprovação entre jogos sem DLCs, com poucas DLCs, volume moderado e modelo live-service.
-6. Qual o perfil dos jogos com alta aprovação?
-Classifica jogos com pelo menos 100 avaliações em níveis de qualidade e compara a distribuição com o preço mediano.
----
-📊 Principais insights
-A base analisada possui grande presença de jogos gratuitos, com os jogos pagos representando uma parcela menor do catálogo.
-Jogos pagos apresentam concentração de preços em torno de valores medianos próximos a US$ 50.
-Jogos com preços mais baixos tendem a apresentar aprovação ligeiramente maior.
-Jogos com poucos DLCs apresentam melhor mediana de aprovação, enquanto volumes muito altos de DLCs não aumentam necessariamente a satisfação.
-A maioria dos jogos com 100 ou mais avaliações está nas categorias positivas ou aclamadas.
-Jogos mais bem avaliados conseguem sustentar preços medianos mais altos.
----
-▶️ Como executar
-Opção 1 — Google Colab
-Abra o arquivo `steam_analysis_colab.py` ou o notebook correspondente no Google Colab.
-Execute as células em ordem.
-Caso o Kaggle solicite autenticação, gere um token em sua conta Kaggle e faça upload do arquivo `kaggle.json`.
-Opção 2 — Ambiente local
-Instale as dependências:
-```bash
-pip install pandas numpy matplotlib seaborn kagglehub
-```
-Execute o arquivo Python:
-```bash
-python steam_analysis_colab.py
-```
-> Observação: o arquivo foi gerado a partir de um notebook do Google Colab, portanto algumas células e comandos podem precisar de adaptação para execução local.
----
-📁 Estrutura esperada
+# 🎮 Steam Analytics
+
+Análise exploratória do catálogo de jogos da Steam, desenvolvida em Python e organizada em perguntas de negócio sobre preço, popularidade, avaliações, gêneros e DLCs.
+
+## Objetivo
+
+Transformar dados brutos do Steam Games Dataset em informações úteis sobre o mercado de jogos, combinando limpeza, engenharia de atributos, visualizações e interpretação dos resultados.
+
+## Perguntas analisadas
+
+- Qual é o preço mediano por gênero?
+- Como os jogos gratuitos e pagos se distribuem?
+- Quais gêneros dominam o catálogo?
+- Existe relação entre preço e aprovação dos usuários?
+- Como a quantidade de DLCs se relaciona com a satisfação?
+- Qual é o perfil dos jogos com alta aprovação?
+
+## Principais resultados
+
+- Jogos gratuitos têm presença relevante no catálogo.
+- Entre os jogos pagos, preço médio e mediano podem diferir devido a valores extremos.
+- Preços menores apresentam, em alguns grupos, aprovação ligeiramente superior.
+- Uma quantidade elevada de DLCs não implica maior satisfação.
+- Jogos bem avaliados conseguem sustentar preços medianos mais altos.
+
+> Os resultados dependem do recorte e da versão do dataset utilizados no notebook.
+
+## Tecnologias
+
+- Python
+- pandas e NumPy
+- Matplotlib e Seaborn
+- Jupyter Notebook
+- kagglehub
+
+## Arquivos
+
 ```text
 .
-├── steam_analysis_colab.py
+├── atividade_steam.ipynb
+├── Steam Analysis Deck _standalone_.html
 └── README.md
-└──Steam Analysis Deck _standalone_.html
 ```
----
-🎯 Objetivo acadêmico
-Este trabalho foi desenvolvido como atividade da disciplina de Ciência de Dados, com foco em aplicar conceitos de análise exploratória, tratamento de dados, visualização de informações e interpretação de resultados.
----
-👤 Autor
-Pedro Lima Zampier de Andrade
+
+- `atividade_steam.ipynb`: preparação, análise e visualizações.
+- `Steam Analysis Deck _standalone_.html`: apresentação navegável dos resultados.
+
+## Como executar
+
+1. Clone este repositório:
+
+```bash
+git clone https://github.com/arthurbueno150-create/Steam_Analytics.git
+cd Steam_Analytics
+```
+
+2. Instale as dependências:
+
+```bash
+pip install pandas numpy matplotlib seaborn kagglehub jupyter
+```
+
+3. Abra o notebook:
+
+```bash
+jupyter notebook atividade_steam.ipynb
+```
+
+O `kagglehub` poderá solicitar autenticação para baixar o dataset.
+
+## Demonstração
+
+A apresentação HTML pode ser baixada e aberta no navegador. O repositório também utiliza GitHub Pages quando a publicação está habilitada.
+
+## Autor
+
+Arthur Bueno de Morais Oliveira
+
+Projeto acadêmico da disciplina de Ciência de Dados.
